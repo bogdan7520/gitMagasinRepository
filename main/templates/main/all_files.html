@@ -1,0 +1,61 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{% static 'main/img/ico_icon_for_magasin.ico' %}" type="image/x-icon">
+    {% if var_for_show == "komp" %}
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    {% else %}
+    <link rel="stylesheet" href="{% static 'main/css/main_telephone.css' %}">
+    {% endif %}
+    <title>{% block title_block %}{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+
+{% endblock %}
+{% if user.is_staff %}
+<a class="hrefonadmin" href="/admin">Панель администратора</a>
+{% endif %}
+
+{% if var_for_show != "komp" %}
+<div class="div_for_close_divindiv">
+    <div class="div_for_close"></div>
+</div>
+{% endif %}
+
+<div class="divindivaside">
+<aside>
+    {% if var_for_show != "komp" %}
+    <div class="toggle"></div>
+    {% endif %}
+    <ul>
+        <a href="{% url 'home_page' %}"><li>Главная</li></a>
+        <a href="{% url 'kr_page' %}"><li>Крыжма</li></a>
+        <a href="{% url 'vish_page' %}"><li>Вышивка</li></a>
+        <a href="{% url 'ost_page' %}"><li>Остальное</li></a>
+    </ul>
+</aside>
+</div>
+{% block script_content %}
+{% endblock %}
+
+{% if var_for_show != "komp" %}
+    <script>
+        var toggle = document.querySelector('.toggle');
+        toggle.onclick = function() {
+        var navigation = document.querySelector('.divindivaside');
+        navigation.classList.toggle('active')
+        var close = document.querySelector('.div_for_close');
+        close.classList.toggle('active_close');
+        var close_div = document.querySelector('.div_for_close_divindiv');
+        close_div.classList.toggle('for_close_divindiv_2');
+        }
+    </script>
+{% endif %}
+</body>
+</html>
