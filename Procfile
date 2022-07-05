@@ -1,0 +1,1 @@
+web: gunicorn magasinproektdj.wsgi --log-file -
