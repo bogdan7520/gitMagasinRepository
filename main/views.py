@@ -13,6 +13,8 @@ elif platform == "darwin":
     var_for_show = "komp"
 elif platform == "win32":
     var_for_show = "komp"
+else:
+    var_for_show = 'tele'
 
 class tovarDetailView(DetailView):
     if platform == "linux" or platform == "linux2":
@@ -21,6 +23,8 @@ class tovarDetailView(DetailView):
         var_for_show = "komp"
     elif platform == "win32":
         var_for_show = "komp"
+    else:
+        var_for_show = 'tele'
     extra_context = {"var_for_show": var_for_show}
     model = base_magasin
     template_name = 'main/detail_view.html'
@@ -37,6 +41,8 @@ def home_page(request):
         var_for_show = "komp"
     elif platform == "win32":
         var_for_show = "komp"
+    else:
+        var_for_show = 'tele'
 
     tovars = base_magasin.objects.order_by("price")
     for el in tovars:
@@ -55,7 +61,8 @@ def kr_page(request):
         var_for_show = "komp"
     elif platform == "win32":
         var_for_show = "komp"
-
+    else:
+        var_for_show = 'tele'
 
     tovars = base_magasin.objects.order_by("price")
     data = {"var_for_show": var_for_show, "tovars": tovars}
@@ -68,6 +75,8 @@ def vish_page(request):
         var_for_show = "komp"
     elif platform == "win32":
         var_for_show = "komp"
+    else:
+        var_for_show = 'tele'
     tovars = base_magasin.objects.order_by("price")
     data = {"var_for_show": var_for_show, "tovars": tovars}
     return render(request, 'main/vish_page.html', data)
@@ -80,6 +89,8 @@ def ost_page(request):
         var_for_show = "komp"
     elif platform == "win32":
         var_for_show = "komp"
+    else:
+        var_for_show = 'tele'
     tovars = base_magasin.objects.order_by("price")
     data = {"var_for_show": var_for_show, "tovars": tovars}
     return render(request, 'main/ost_page.html', data)
