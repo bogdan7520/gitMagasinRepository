@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'djangob-insecureb-y_jhcfb-nnj3f93b-dai65b*srqb#b*75ptt4b-ubb!mkxtsb#b*lbb-vs^r_secretn_keyn'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ['DJANGO_DEBUG']
+DEBUG = False
 
 ALLOWED_HOSTS = ['krizhma.herokuapp.com',]
 
