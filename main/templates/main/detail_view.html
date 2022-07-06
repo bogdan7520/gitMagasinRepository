@@ -1,5 +1,5 @@
 {% extends 'main/all_files.html' %}
-{% load static %}
+{% load staticfiles %}
 
 {% block title_block %}{{ tovars.title }}{% endblock %}
 
@@ -79,8 +79,8 @@
 
 {% block script_content %}
 {% if var_for_show == 'komp' %}
-<script src="{% static 'main/js/js_for_show_photos.js' %}"></script>
+<script src="{% staticfiles 'main/js/js_for_show_photos.js' %}"></script>
 {% else %}
-<script src="{% static 'main/js/js_for_show_photos_telephone.js' %}"></script>
+<script src="{% staticfiles 'main/js/js_for_show_photos_telephone.js' %}"></script>
 {% endif %}
 {% endblock %}
