@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
+import whitenoise
 import os
-from django.contrib.staticfiles import storage
+from storages import storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,6 +39,7 @@ SESSION_COOKIE_SECURE = True
 
 INSTALLED_APPS = [
     'main',
+    'storages',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -162,7 +163,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = whitenoise.storage.CompressedManifestStaticFilesStorage
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
