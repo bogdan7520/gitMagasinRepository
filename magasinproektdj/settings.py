@@ -39,6 +39,8 @@ SESSION_COOKIE_SECURE = True
 
 INSTALLED_APPS = [
     'main',
+    'storages',
+    "whitenoise.runserver_nostatic",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -167,7 +169,7 @@ STATICFILES_FINDERS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
