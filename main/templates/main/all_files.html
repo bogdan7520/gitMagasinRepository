@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="{% static 'main/img/ico_icon_for_magasin.ico' %}" type="image/x-icon">
     {% if var_for_show == "komp" %}
-    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}">
     {% else %}
-    <link rel="stylesheet" href="{% static 'main/css/main_telephone.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/main_telephone.css' %}">
     {% endif %}
     <title>{% block title_block %}{% endblock %}</title>
 </head>
