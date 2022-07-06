@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['krizhma.herokuapp.com','127.0.0.1']
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 
-#SECURE_HSTS_SECONDS = 60
+SECURE_HSTS_SECONDS = 3600
 
 # Application definition
 
