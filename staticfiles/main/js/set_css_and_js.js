@@ -3,7 +3,7 @@ var $head = document.head,
         $link = document.querySelector('link');
 
     $link.rel = 'stylesheet';
-    $link.href = "{% static 'main/css/main.css' %}";
+    $link.href = "static/main/css/main.css";
 
     $head.appendChild($link);
 }
@@ -12,7 +12,7 @@ var $head = document.head,
         $link = document.querySelector('link');
 
     $link.rel = 'stylesheet';
-    $link.href = "{% static 'main/css/main_telephone.css' %}";
+    $link.href = "static/main/css/main_telephone.css";
 
     $head.appendChild($link);
 
