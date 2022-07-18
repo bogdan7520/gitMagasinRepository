@@ -83,4 +83,18 @@
 {% else %}
 <script src="{% static 'main/js/js_for_show_photos_telephone.js' %}"></script>
 {% endif %}
+<script>
+    if (document.documentElement.clientWidth > 500) {
+        var $body = document.body,
+            $script_main = document.createElement('script');
+            $script_main.src = "{% static 'main/js/js_for_show_photos.js' %}";
+            $body.appendChild($script_main);
+    }
+    else if (document.documentElement.clientWidth <= 500) {
+        var $body = document.body,
+            $script_telephone = document.createElement('script');
+            $script_telephone.src = "{% static 'main/js/js_for_show_photos_telephone.js' %}";
+            $body.appendChild($script_telephone);
+    }
+</script>
 {% endblock %}
