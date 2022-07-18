@@ -18,18 +18,18 @@ var $head = document.head,
 
     var $body = document.body,
         $divindiv_close = document.createElement('div');
-        $divindiv_close.class = 'div_for_close_divindiv';
+        $divindiv_close.setAttribute('class', 'div_for_close_divindiv');
     $body.appendChild($divindiv_close);
 
     var $body = document.body,
         $div_for_close = document.createElement('div');
-        $div_for_close.class = "div_for_close";
+        $div_for_close.setAttribute('class', "div_for_close");
         $divindiv_close.appendChild($div_for_close);
 
     var $body = document.body,
         $aside = document.querySelector('aside');
         $toggle = document.createElement('div');
-        $toggle.class = "toggle";
+        $toggle.setAttribute('class',"toggle");
         $aside.appendChild($toggle)
 
     var $body = document.body,
