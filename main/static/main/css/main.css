@@ -178,7 +178,7 @@ color: #333;
 
 .divindivmagazinforlook img {
 position: relative;
-top: 5vh;
+top: 0vh;
 left: 0vw;
 z-index: 9;
 height: 55vh;
@@ -209,8 +209,8 @@ top: 20vh;
 }
 
 .all_tovars_div_img {
-position: relative;
-top: -20vh;
+position: absolute;
+top: 0vh;
 justify-content: center;
 align-items: center;
 display: flex;
@@ -469,6 +469,3 @@ left: 245vw;
 
 overflow: hidden;
 }
-
-
-
