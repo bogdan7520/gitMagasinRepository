@@ -4,6 +4,7 @@ var $head = document.head,
 
     $link.rel = 'stylesheet';
     $link.href = "static/main/css/main.css";
+    $link.type = "text/css"
 
     $head.appendChild($link);
 }
@@ -13,6 +14,7 @@ var $head = document.head,
 
     $link.rel = 'stylesheet';
     $link.href = "static/main/css/main_telephone.css";
+    $link.type = "text/css"
 
     $head.appendChild($link);
 
@@ -34,6 +36,6 @@ var $head = document.head,
 
     var $body = document.body,
         $script_toggle = document.createElement('script');
-        $script_toggle.innerHTML = "var toggle = document.querySelector('.toggle');toggle.onclick = function() {var navigation = document.querySelector('.divindivaside');navigation.classList.toggle('active');var close = document.querySelector('.div_for_close');close.classList.toggle('active_close');var close_div = document.querySelector('.div_for_close_divindiv');close_div.classList.toggle('for_close_divindiv_2');";
+        $script_toggle.innerHTML = "var toggle = document.querySelector('.toggle');toggle.onclick = function() {var navigation = document.querySelector('.divindivaside');navigation.classList.toggle('active');var close = document.querySelector('.div_for_close');close.classList.toggle('active_close');var close_div = document.querySelector('.div_for_close_divindiv');close_div.classList.toggle('for_close_divindiv_2');}";
         $body.appendChild($script_toggle);
 }
