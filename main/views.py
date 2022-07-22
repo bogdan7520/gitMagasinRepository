@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from sys import platform
-from .models import base_magasin
+from .models import base_magasin_2
 from django.db import models
 from django.views.generic import DetailView
 #from PIL import Image
@@ -26,7 +26,7 @@ class tovarDetailView(DetailView):
     else:
         var_for_show = 'tele'
     extra_context = {"var_for_show": var_for_show}
-    model = base_magasin
+    model = base_magasin_2
     template_name = 'main/detail_view.html'
     context_object_name = 'tovars'
 
@@ -44,7 +44,7 @@ def home_page(request):
     else:
         var_for_show = 'tele'
 
-    tovars = base_magasin.objects.order_by("price")
+    tovars = base_magasin_2.objects.order_by("price")
     for el in tovars:
         imageforsearchpath = el.photo_1
         #
@@ -64,7 +64,7 @@ def kr_page(request):
     else:
         var_for_show = 'tele'
 
-    tovars = base_magasin.objects.order_by("price")
+    tovars = base_magasin_2.objects.order_by("price")
     data = {"var_for_show": var_for_show, "tovars": tovars}
     return render(request, 'main/kr_page.html', data)
 
@@ -77,7 +77,7 @@ def vish_page(request):
         var_for_show = "komp"
     else:
         var_for_show = 'tele'
-    tovars = base_magasin.objects.order_by("price")
+    tovars = base_magasin_2.objects.order_by("price")
     data = {"var_for_show": var_for_show, "tovars": tovars}
     return render(request, 'main/vish_page.html', data)
 
@@ -91,6 +91,6 @@ def ost_page(request):
         var_for_show = "komp"
     else:
         var_for_show = 'tele'
-    tovars = base_magasin.objects.order_by("price")
+    tovars = base_magasin_2.objects.order_by("price")
     data = {"var_for_show": var_for_show, "tovars": tovars}
     return render(request, 'main/ost_page.html', data)
