@@ -120,107 +120,125 @@ display: block;
 margin: 100px;
 }*/
 
-.divindivmagazinforlook {
-position: relative;
-float: right;
-right: 0vw;
-top: 0vh;
-overflow: hidden;
-width: 24vw;
-height: 50vh;
-background: white;
-align-items: left;
-justify-content: left;
-text-align: left;
-border-radius: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
-margin: 20px;
-}
-.divindivab2 {
-position: relative;
-float: left;
-left: 0vw;
-top: 0vh;
-margin-left: 0vw;
-margin-top: 0vh;
-color: white;
-}
-.divindivmagazinforlook h3 {
-position: relative;
-top: 38vh;
-left: 1.5vw;
-z-index: 10;
-
-width: 20vw;
-font-family: 'Lobster', cursive;
-letter-spacing: 0.1vw;
-color: black;
-filter: drop-shadow(0 0 1px white) drop-shadow(0 0 3px white) drop-shadow(0 0 5px white);
-}
-
-.price_class {
-position: relative;
-top: -3vh;
-left: 1.5vw;
-z-index: 10;
-
-width: 20vw;
-font-family: 'Lobster', cursive;
-letter-spacing: 0.1vw;
-color: #333;
-filter: drop-shadow(0 0 1px white) drop-shadow(0 0 3px white) drop-shadow(0 0 5px white);
-}
-
-.price_class::before {
-content: var(--grivn);
-color: #333;
-}
-
-.divindivmagazinforlook img {
-position: relative;
-top: 0vh;
-left: 0vw;
-z-index: 9;
-height: 55vh;
-width: auto;
-
-transition: 0.5s;
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #f9f9fb;
 }
 
 .maindivtovar {
-position: relative;
-float: right;
-}
-
-.divindivmagazinforlook img:hover {
-height: 60vh;
-/*top: -18vh;
-left: -3vh;*/
+  margin-top: 0px;
+  float: left;
 }
 
 .all_tovars_div {
-position: relative;
-float: right;
-width: 80vw;
-opacity: 1;
-
-right: 1vw;
-top: 20vh;
-}
-
-.all_tovars_div_img {
-position: absolute;
-top: 0vh;
-justify-content: center;
-align-items: center;
-display: flex;
-
-
-height: 50vh;
-width: 24vw;
+  position: absolute;
+  left: 18vw;
+  width: 80vw;
+  top: 100px;
 }
 
 
+.divindivmagazinforlook {
+  position: relative;
+  width: 400px;
+  height: 520px;
+  background: #fff;
+  border: 10px solid #fff;
+  float: left;
+
+  margin-left: 80px;
+  margin-top: 100px;
+
+  box-shadow: 5px 5px 10px rgba(51, 51, 51, 0.5);
+
+  transition: 0.5s;
+}
+
+.divindivmagazinforlook:hover {
+  box-shadow: 7px 7px 10px rgba(51, 51, 51, 0.7);
+}
+
+.divindivmagazinforlook a {
+  text-decoration: none;
+  color: #111;
+}
+
+.divindivmagazinforlook .all_tovars_div_img {
+  position: relative;
+  display: flex;
+  height: 400px;
+  width: 400px;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  overflow: hidden;
+
+  top: -150px;
+  bottom: 0px;
+}
+
+
+.divindivmagazinforlook .all_tovars_div_img img {
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  height: 100%;
+
+  transition: 0.5s;
+}
+.divindivmagazinforlook h3 {
+  position: relative;
+  width: 90%;
+  height: 70px;
+  background: transparent;
+  font-family: 'Oswald', sans-serif;
+  padding: 5px 10px;
+  top: 415px;
+  margin-left: 2%;
+  font-size: 17px;
+
+  overflow: hidden;
+}
+
+
+.divindivmagazinforlook h2 {
+  position: relative;
+  width: 17%;
+  height: 35px;
+  background: #fff;
+  font-family: 'Oswald', sans-serif;
+  top: 250px;
+  left: 335px;
+  box-shadow: -25px 0px 0px #fff,
+              0px 30px 0px #fff,
+              -25px 30px 0px #fff;
+
+  z-index: 20;
+}
+
+
+
+.divindivmagazinforlook h2::before {
+  content: var(--grivn);
+  position: relative;
+  display: block;
+  width: 5%;
+  height: 35px;
+  font-family: 'Oswald', sans-serif;
+  top: 0px;
+  color: #111;
+  float: left;
+  right: 15px;
+}
+
+.divindivmagazinforlook .all_tovars_div_img img:hover {
+  top: -5px;
+  height: 105%;
+}
 
 
 
@@ -244,10 +262,10 @@ transition: 0.5s;
 
 .divindivforlook_detail h1 {
 position: relative;
-top: 15vh;
-right: -5vw;
-font-size: 50px;
-width: 29vw;
+top: 20vh;
+right: -1vw;
+font-size: 35px;
+width: 32vw;
 color: #333;
 font-family: 'Roboto Slab', serif;
 height: 20vh;
@@ -255,9 +273,9 @@ height: 20vh;
 
 .divindivforlook_detail h2 {
 position: relative;
-top: 20vh;
-right: -5vw;
-font-size: 50px;
+top: -16vh;
+right: -1vw;
+font-size: 45px;
 width: 100px;
 color: #333;
 font-family: 'Roboto Slab', serif;
@@ -289,9 +307,9 @@ font-family: 'Roboto Slab', serif;
 
 .divindivforlook_detail p {
 position: relative;
-left: 5vw;
-top: -50vh;
-width: 29vw;
+left: -35vw;
+top: -25vh;
+width: 35vw;
 height: 1vh;
 }
 

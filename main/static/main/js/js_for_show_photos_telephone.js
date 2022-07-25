@@ -13,7 +13,6 @@ function all_func(for_one_plus, some_num) {
 
     function func_click_right_button(for_one_plus, some_num) {
     var for_one_plus = String(for_one_plus)
-    console.log("Right: " + for_one_plus)
 
 
     f = some_num
@@ -41,7 +40,6 @@ function all_func(for_one_plus, some_num) {
 
     function func_click_left_button(for_one_plus, some_num) {
     var for_one_plus = String(for_one_plus)
-    console.log("Left: " + for_one_plus)
     var f = some_num
 
     var click_var = 'left'
@@ -73,12 +71,9 @@ function all_func(for_one_plus, some_num) {
 
 
         if (click_var == 'right') {
-        console.log("count_img_var:  " + (count_img_var - 1))
-        console.log("for_one_plus:  " + for_one_plus)
         if (Number(for_one_plus) <= (count_img_var - 1)){
         document.getElementById('div_for_photos_id').style.left = for_left + 'vw'
         document.getElementById('button_left_id').style.cssText = 'border-top: 15px solid #333;border-left: 15px solid #333;width: 25px;height: 25px;'
-        console.log('for_left' + for_left)
         }
         else if (for_one_plus == count_img_var) {
         //var for_one_plus = (for_one_plus - 7);
@@ -100,7 +95,6 @@ function all_func(for_one_plus, some_num) {
             for_right = (for_left - 80)
             document.getElementById('div_for_photos_id').style.left = for_right + 'vw'
             document.getElementById('button_right_id').style.cssText = 'border-top: 15px solid #333;border-right: 15px solid #333;width: 25px;height: 25px;'
-            console.log('for_right' + for_right)
             }
 
             else if (for_one_plus < 0) {

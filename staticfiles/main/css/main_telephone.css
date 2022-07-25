@@ -23,10 +23,12 @@ padding: 0px;
 position: absolute;
 float: top;
 top: 3vh;
+left: -20vw;
 }
 
 .title_page {
-font-size: 5vh;
+font-size: 4.5vh;
+width: 100%;
 font-family: 'Rubik Moonrocks', cursive;
 }
 
@@ -167,7 +169,7 @@ width: 100vw;
 height: 100vh;
 opacity: 0.5;
 background: #333;
-z-index: 11;
+z-index: 21;
 top: 0px;
 }
 
@@ -203,105 +205,120 @@ display: block;
 margin: 100px;
 }*/
 
-.divindivmagazinforlook {
-position: relative;
-float: right;
-right: 0vw;
-top: 0vh;
-overflow: hidden;
-width: 250px;
-height: 250px;
-background: #f9f9fb;
-align-items: left;
-justify-content: left;
-text-align: left;
-border-radius: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
-margin: 20px;
-}
-.divindivab2 {
-position: relative;
-float: left;
-left: 0vw;
-top: 0vh;
-margin-left: 0vw;
-margin-top: 0vh;
-color: white;
-}
-.divindivmagazinforlook h3 {
-position: relative;
-top: 3px;
-left: 1.5vw;
-z-index: 10;
-font-size: 16px;
-width: 240px;
-font-family: 'Lobster', cursive;
-letter-spacing: 0.1vw;
-color: black;
-filter: drop-shadow(0 0 1px white) drop-shadow(0 0 3px white) drop-shadow(0 0 5px white);
-}
-
-.price_class {
-position: relative;
-top: -3vh;
-left: 1.5vw;
-z-index: 10;
-
-width: 200px;
-font-family: 'Lobster', cursive;
-letter-spacing: 0.1vw;
-color: #333;
-filter: drop-shadow(0 0 1px white) drop-shadow(0 0 3px white) drop-shadow(0 0 5px white);
-}
-
-.price_class::before {
-content: var(--grivn);
-color: #333;
-}
-
-.divindivmagazinforlook img {
-
-z-index: 9;
-height: 300px;
-width: auto;
-
-
-
-transition: 0.5s;
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #f9f9fb;
 }
 
 .maindivtovar {
-position: relative;
-float: right;
+  margin-top: 0px;
+  float: left;
+  margin-left: -20vw;
 }
 
-.divindivmagazinforlook img:hover {
-height: 350px;
-/*top: -18vh;
-left: -3vh;*/
+
+.divindivmagazinforlook {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  background: #fff;
+  border: 10px solid #fff;
+  float: left;
+
+  margin-top: 100px;
+
+  box-shadow: 5px 5px 10px rgba(51, 51, 51, 0.5);
+
+  transition: 0.5s;
 }
 
-.all_tovars_div {
-position: relative;
-float: right;
-width: 80vw;
-opacity: 1;
-
-right: 1vw;
-top: 20vh;
+.divindivmagazinforlook:hover {
+  box-shadow: 7px 7px 10px rgba(51, 51, 51, 0.7);
 }
 
-.all_tovars_div_img {
-position: absolute;
-top: 0px;
-justify-content: center;
-align-items: center;
-display: flex;
-
-
-height: 250px;
-width: 250px;
+.divindivmagazinforlook a {
+  text-decoration: none;
+  color: #111;
 }
+
+.divindivmagazinforlook .all_tovars_div_img {
+  position: relative;
+  display: flex;
+  height: 300px;
+  width: 300px;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  overflow: hidden;
+
+  top: -150px;
+  bottom: 0px;
+}
+
+
+.divindivmagazinforlook .all_tovars_div_img img {
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  height: 100%;
+
+  transition: 0.5s;
+}
+.divindivmagazinforlook h3 {
+  position: relative;
+  width: 90%;
+  height: 70px;
+  background: transparent;
+  font-family: 'Oswald', sans-serif;
+  padding: 5px 10px;
+  top: 315px;
+  margin-left: 2%;
+  font-size: 17px;
+
+  overflow: hidden;
+}
+
+
+.divindivmagazinforlook h2 {
+  position: relative;
+  width: 17%;
+  height: 35px;
+  background: #fff;
+  font-family: 'Oswald', sans-serif;
+  top: 150px;
+  left: 255px;
+  box-shadow: -25px 0px 0px #fff,
+              0px 30px 0px #fff,
+              -25px 30px 0px #fff;
+
+  z-index: 20;
+}
+
+
+
+.divindivmagazinforlook h2::before {
+  content: var(--grivn);
+  position: relative;
+  display: block;
+  width: 5%;
+  height: 35px;
+  font-family: 'Oswald', sans-serif;
+  top: 0px;
+  color: #111;
+  float: left;
+  right: 15px;
+}
+
+.divindivmagazinforlook .all_tovars_div_img img:hover {
+  top: -5px;
+  height: 105%;
+}
+
+
 
 
 
