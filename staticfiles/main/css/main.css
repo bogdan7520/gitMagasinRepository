@@ -70,9 +70,10 @@ margin-top: 5vh;
 width: auto;
 height: 8vh;
 background: linear-gradient(90deg, #143263, #631440);
-padding-left: 1.8vw;
+padding-left: 0.3vw;
 padding-top: 2vh;
 border-radius: 20px;
+text-align: center;
 
 transition: 0.5s;
 }
@@ -82,13 +83,14 @@ border-radius: 35px;
 box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
-.divindivaside ul a:nth-child(4) {
-padding-left: 0.7vw;
+.divindivaside ul a:nth-child(4), .divindivaside ul a:nth-child(3) {
+padding-left: 0.3vw;
+padding-bottom: 1vh;
+}
+.divindivaside ul a:nth-child(4) li, .divindivaside ul a:nth-child(3) li {
+font-size: 2.5vh;
 }
 
-.divindivaside ul a:nth-child(3) {
-padding-left: 1vw;
-}
 
 .hrefonadmin {
 position: fixed;

@@ -1,35 +1,34 @@
 {% extends 'main/all_files.html' %}
 
-{% block title_block %}Крыжма{% endblock %}
+{% block title_block %}Вышивка на крыжме 100х100{% endblock %}
 
 {% block content %}
 <div class="divindivtitle">
-<h1 class="title_page">Крыжма</h1>
+<h1 class="title_page">Вышивка на крыжме 100х100</h1>
 </div>
-
 
 
 
 <div class="all_tovars_div">
     {% for el in tovars %}
-{% if el.tema|upper == "КРЫЖМА" %}
+{% if el.tema|upper == "100НА100" %}
     <div class="maindivtovar">
 <div class="divindivmagazinforlook">
         <a href="{% url 'news_detail' el.id %}">
         <div class="divindivab divindivab2">
 
             <h3 id="titletovar" class="">{{ el.title }}</h3>
-{% if el.price != "" %}
-<h2 style="--grivn:'₴'" class="price_class">{{ el.price }}</h2>
+
+           {% if el.price != "" %}
+<h2 style="--grivn:''" class="price_class">{{ el.price }}</h2>
             {% else %}
             <h2 style="--grivn:''" class="price_class"></h2>
             {% endif %}
-   <div class="all_tovars_div_img">
+    <div class="all_tovars_div_img">
             {% if tovars.photo_1 != "" %}
             <img src="{{ el.photo_1 }}">
         {% endif %}
 </div>
-
 
 
         </div>

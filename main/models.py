@@ -79,5 +79,4 @@ class base_magasin_2(models.Model):
         verbose_name = 'Объявление'
         verbose_name_plural = 'Объявления'
     def __str__(self):
-        return f'{self.title} {self.photo_1} {self.photo_2} {self.photo_3} {self.photo_4} {self.photo_5} {self.photo_6} ' \
-               f'{self.photo_7} {self.photo_8} {self.about} {self.price} {self.tema}'
+        return f'{self.title} | Тема: {self.tema} | Цена: {self.price}'

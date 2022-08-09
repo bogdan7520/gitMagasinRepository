@@ -12,8 +12,10 @@
 
 
             <h1 id="title_detail" class="title_detail">{{ tovars.title }}</h1>
-            {% if el.price != "" %}
+            {% if tovars.price != "" %}
 <h2 style="--grivn:'₴'" class="price_class_detail">{{ tovars.price }}</h2>
+            {% else %}
+            <h2 style="--grivn:''" class="price_class_detail"></h2>
             {% endif %}
     <div class="div_for_images">
         <div id="div_for_photos_id" class="div_for_photos">

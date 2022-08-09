@@ -11,7 +11,7 @@
 
 <div class="all_tovars_div">
     {% for el in tovars %}
-{% if el.tema|upper != "КРЫЖМА" and el.tema|upper != "ВЫШИВКА" %}
+{% if el.tema|upper != "КРЫЖМА" and el.tema|upper != "100НА100" and el.tema|upper != "140НА70"%}
     <div class="maindivtovar">
 <div class="divindivmagazinforlook">
         <a href="{% url 'news_detail' el.id %}">
@@ -20,6 +20,8 @@
             <h3 id="titletovar" class="">{{ el.title }}</h3>
 {% if el.price != "" %}
 <h2 style="--grivn:'₴'" class="price_class">{{ el.price }}</h2>
+            {% else %}
+            <h2 style="--grivn:''" class="price_class"></h2>
             {% endif %}
     <div class="all_tovars_div_img">
             {% if tovars.photo_1 != "" %}

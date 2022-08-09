@@ -23,7 +23,13 @@
 
             <h3 id="titletovar" class="">{{ el.title }}</h3>
       {% if el.price != "" %}
+            {% if el.tema|upper == "140НА70" or el.tema|upper == "100НА100" %}
+            <h2 style="--grivn:''" class="price_class">{{ el.price }}</h2>
+            {% else %}
 <h2 style="--grivn:'₴'" class="price_class">{{ el.price }}</h2>
+            {% endif %}
+            {% else %}
+            <h2 style="--grivn:''" class="price_class"></h2>
             {% endif %}
     <div class="all_tovars_div_img">
         {% if tovars.photo_1 != "" %}
