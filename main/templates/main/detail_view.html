@@ -7,15 +7,23 @@
 {% block content %}
 <div class="maindivtovar_detail">
 <div class="divindivforlook_detail">
-
+{% if user.is_staff %}
+            <a style="display: block; margin-top: 500px; margin-left: 50px; position: absolute; width: 190px; height: 20px; padding: 20px;
+            background: linear-gradient(to left, #5d32ad, #2dba6a); color: #fff; text-decoration: none;
+            border-radius: 20px; cursor: pointer;" href="/admin/main/base_magasin_2/{{ tovars.id }}/change/">Редактировать объявление</a>
+            {% endif %}
         <div class="divindivab_detail">
 
 
             <h1 id="title_detail" class="title_detail">{{ tovars.title }}</h1>
+            {% if tovars.tema|upper != "100НА100" and tovars.tema|upper != "140НА70"%}
             {% if tovars.price != "" %}
 <h2 style="--grivn:'₴'" class="price_class_detail">{{ tovars.price }}</h2>
             {% else %}
             <h2 style="--grivn:''" class="price_class_detail"></h2>
+            {% endif %}
+            {% else %}
+            <h2 style="--grivn:''" class="price_class_detail">{{ tovars.price }}</h2>
             {% endif %}
     <div class="div_for_images">
         <div id="div_for_photos_id" class="div_for_photos">
@@ -67,7 +75,7 @@
         </div>
 </div>
 
-            <p class="about_tovar">{{ tovars.about }}</p>
+            <p class="about_tovar"><b>{{ tovars.about }}</b></p>
         </div>
 
       </div>
@@ -98,5 +106,15 @@
             $script_telephone.src = "{% static 'main/js/js_for_show_photos_telephone.js' %}";
             $body.appendChild($script_telephone);
     }
+</script>
+<script>
+    var replace_letters = /&lt;/gi;
+    var str = document.querySelector('.about_tovar > b').innerHTML;
+    var result = str.replace(replace_letters, '<');
+    console.log(result);
+    var replace_letters_2 = /&gt;/gi;
+    var result = result.replace(replace_letters_2, '>');
+    document.querySelector('.about_tovar > b').innerHTML = result
+    console.log(result);
 </script>
 {% endblock %}
