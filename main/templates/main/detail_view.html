@@ -111,10 +111,8 @@
     var replace_letters = /&lt;/gi;
     var str = document.querySelector('.about_tovar > b').innerHTML;
     var result = str.replace(replace_letters, '<');
-    console.log(result);
     var replace_letters_2 = /&gt;/gi;
     var result = result.replace(replace_letters_2, '>');
     document.querySelector('.about_tovar > b').innerHTML = result
-    console.log(result);
 </script>
 {% endblock %}

@@ -24,14 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-#SECRET_KEY = os.environ['SECRET_KEY']
-SECRET_KEY = 'secretn_keyn'
+SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = os.environ['DJANGO_DEBUG']
-DEBUG = True
+DEBUG = os.environ['DJANGO_DEBUG']
 
 
-ALLOWED_HOSTS = ['krizhma.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['krizhma.herokuapp.com',]
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
